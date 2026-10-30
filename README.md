@@ -1,234 +1,114 @@
-# 🛒 CRUD de Productos | Laravel
+# 🛒 Sistema de Gestión de Productos | CRUD Laravel
 
 <p align="center">
-  <strong>Sistema web para la administración de productos</strong>
-  <br>
-  Aplicación desarrollada con Laravel, PHP, MySQL y Bootstrap.
+  <img src="https://img.shields.io/badge/Laravel-13-FF2D20?style=for-the-badge&logo=laravel&logoColor=white">
+  <img src="https://img.shields.io/badge/PHP-8.3-777BB4?style=for-the-badge&logo=php&logoColor=white">
+  <img src="https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
+  <img src="https://img.shields.io/badge/Bootstrap-UI-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">
 </p>
 
 <p align="center">
-  ![Laravel](https://img.shields.io/badge/Laravel-13-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
-  ![PHP](https://img.shields.io/badge/PHP-8.3-777BB4?style=for-the-badge&logo=php&logoColor=white)
-  ![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-  ![Bootstrap](https://img.shields.io/badge/Bootstrap-UI-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+  Aplicación web para la administración de productos mediante operaciones CRUD,
+  desarrollada con Laravel, PHP y MySQL.
 </p>
 
 ---
 
-## 📌 Tabla de contenido
+## 📌 Acerca del proyecto
 
-1. [Descripción del proyecto](#-descripción-del-proyecto)
-2. [Objetivos](#-objetivos)
-3. [Tecnologías utilizadas](#-tecnologías-utilizadas)
-4. [Requisitos](#-requisitos)
-5. [Instalación y configuración](#-instalación-y-configuración)
-6. [Base de datos](#-base-de-datos)
-7. [Funcionalidades CRUD](#-funcionalidades-crud)
-8. [Estructura del proyecto](#-estructura-del-proyecto)
-9. [Errores encontrados y soluciones](#-errores-encontrados-y-soluciones)
-10. [Pruebas realizadas](#-pruebas-realizadas)
-11. [Evidencias del proyecto](#-evidencias-del-proyecto)
-12. [Seguridad](#-seguridad-y-buenas-prácticas)
-13. [Conclusiones](#-conclusiones)
+Este proyecto consiste en el desarrollo de un sistema web de gestión de productos. Su objetivo es implementar las operaciones fundamentales de un CRUD (*Create, Read, Update, Delete*), permitiendo administrar información almacenada en una base de datos.
 
----
+La aplicación cuenta con una interfaz que facilita el registro, consulta, modificación y eliminación de productos.
 
-## 📖 Descripción del proyecto
+**Objetivo:** desarrollar una aplicación funcional utilizando el patrón Modelo-Vista-Controlador (MVC) de Laravel y conectar el sistema con una base de datos MySQL.
 
-Este proyecto consiste en el desarrollo de una aplicación web para administrar productos mediante las operaciones CRUD (*Create, Read, Update, Delete*).
+## 🖥️ Demostración
 
-La aplicación fue desarrollada utilizando Laravel como framework principal, PHP como lenguaje de programación y MySQL como sistema de gestión de bases de datos.
+A continuación, se presentan capturas del resultado final de la aplicación.
 
-El sistema permite registrar productos, visualizar la información almacenada, consultar sus detalles, modificar sus datos y eliminarlos cuando sea necesario.
+<p align="center">
+  <b>Vista principal — Listado de productos</b>
+</p>
 
-Durante el desarrollo se realizaron configuraciones del entorno, creación de migraciones, implementación de controladores y vistas, conexión con MySQL y pruebas de funcionamiento.
+<p align="center">
+  <img src="capturas/listado.png" width="85%" alt="Listado de productos">
+</p>
 
-También se identificaron y solucionaron diferentes errores que surgieron durante la implementación.
+<p align="center">
+  <b>Registro de productos</b>
+</p>
 
-## 🎯 Objetivos
+<p align="center">
+  <img src="capturas/crear.png" width="85%" alt="Formulario para crear productos">
+</p>
 
-### Objetivo general
+<p align="center">
+  <b>Edición de productos</b>
+</p>
 
-Desarrollar un sistema web utilizando Laravel que permita administrar productos mediante las operaciones CRUD, almacenando y gestionando la información en una base de datos MySQL.
+<p align="center">
+  <img src="capturas/editar.png" width="85%" alt="Formulario de edición">
+</p>
 
-### Objetivos específicos
+<p align="center">
+  <b>Visualización de detalles</b>
+</p>
 
-- Configurar un entorno de desarrollo con Laravel y PHP.
-- Establecer una conexión entre Laravel y MySQL.
-- Crear la estructura de la tabla de productos mediante migraciones.
-- Implementar formularios para registrar y modificar productos.
-- Desarrollar las operaciones de consulta y eliminación.
-- Aplicar validaciones a los datos ingresados.
-- Identificar y corregir errores durante el desarrollo.
-- Comprobar el funcionamiento de todas las operaciones del CRUD.
+<p align="center">
+  <img src="capturas/detalles.png" width="85%" alt="Detalles del producto">
+</p>
 
-## 🛠️ Tecnologías utilizadas
+## ✨ Funcionalidades principales
 
-| Tecnología | Función |
-|---|---|
-| Laravel 13 | Framework para el desarrollo de la aplicación. |
-| PHP 8.3 | Lenguaje de programación. |
-| MySQL | Almacenamiento de los datos. |
+| Funcionalidad | Descripción |
+|:---|:---|
+| 🟢 Crear | Registrar nuevos productos. |
+| 🔵 Leer | Consultar el listado de productos registrados. |
+| 🟡 Actualizar | Modificar la información de un producto. |
+| 🔴 Eliminar | Borrar productos de la base de datos. |
+
+### Información administrada
+
+Cada producto contiene:
+
+- `id`: identificador único.
+- `description`: descripción del producto.
+- `price`: precio.
+- `stock`: cantidad disponible.
+- `created_at`: fecha de creación.
+- `updated_at`: fecha de actualización.
+
+## 🧰 Tecnologías y herramientas
+
+| Tecnología | Uso dentro del proyecto |
+|:---|:---|
+| PHP 8.3.28 | Lenguaje de programación. |
+| Laravel 13 | Framework de desarrollo web. |
+| MySQL | Almacenamiento de datos. |
 | Bootstrap | Diseño de la interfaz. |
 | HTML | Estructura de las páginas. |
-| JavaScript | Recursos de interacción del frontend. |
-| Composer | Administración de dependencias PHP. |
-| Node.js y npm | Instalación y compilación de recursos. |
-| WampServer | Entorno local de desarrollo. |
-| Visual Studio Code | Edición del código fuente. |
+| JavaScript | Recursos del frontend. |
+| Composer | Gestión de dependencias PHP. |
+| Node.js / NPM | Gestión de paquetes frontend. |
+| WampServer | Entorno de desarrollo local. |
 
-## 💻 Requisitos
+## 🏗️ Arquitectura del proyecto
 
-Para ejecutar el proyecto se necesitan:
+La aplicación utiliza el patrón MVC (*Modelo-Vista-Controlador*), que separa la lógica de datos, la presentación y el procesamiento de las solicitudes.
 
-- Windows.
-- PHP 8.3 o compatible.
-- Composer.
-- MySQL.
-- Node.js y npm.
-- WampServer u otro entorno compatible.
-- Navegador web.
+<p align="center">
+  <img src="https://img.shields.io/badge/Architecture-MVC-2F6F8F?style=flat-square">
+</p>
 
-## ⚙️ Instalación y configuración
+| Componente | Archivo o ubicación | Responsabilidad |
+|:---|:---|:---|
+| Modelo | `app/Models/Product.php` | Interacción con la tabla de productos. |
+| Controlador | `app/Http/Controllers/ProductController.php` | Procesamiento de las operaciones CRUD. |
+| Vistas | `resources/views/product/` | Interfaz presentada al usuario. |
+| Rutas | `routes/web.php` | Definición de las rutas de la aplicación. |
+| Migraciones | `database/migrations/` | Estructura de la base de datos. |
 
-### 1. Ubicación del proyecto
-
-El proyecto se encuentra en:
-
-```text
-C:\wamp64\www\crud
-```
-
-Para acceder desde la terminal:
-
-```bash
-cd C:\wamp64\www\crud
-```
-
-### 2. Instalación de dependencias
-
-Ejecutar los siguientes comandos:
-
-```bash
-composer install
-npm install
-```
-
-Estos comandos instalan las dependencias necesarias para el funcionamiento de Laravel y los recursos del frontend.
-
-### 3. Configuración del entorno
-
-Crear el archivo `.env` a partir del archivo de ejemplo:
-
-```bash
-copy .env.example .env
-```
-
-Generar la clave de la aplicación:
-
-```bash
-php artisan key:generate
-```
-
-### 4. Configuración de MySQL
-
-Se creó una base de datos llamada `crud`.
-
-La conexión local se configuró en el archivo `.env`:
-
-```env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=crud
-DB_USERNAME=root
-DB_PASSWORD=
-```
-
-### 5. Ejecución de migraciones
-
-Para crear las tablas y aplicar las modificaciones pendientes:
-
-```bash
-php artisan migrate
-```
-
-### 6. Compilación del frontend
-
-```bash
-npm run build
-```
-
-### 7. Iniciar el servidor
-
-```bash
-php artisan serve
-```
-
-Una vez iniciado, acceder desde el navegador:
-
-**http://127.0.0.1:8000**
-
----
-
-## 🗄️ Base de datos
-
-La aplicación utiliza una base de datos MySQL llamada `crud`.
-
-Dentro de ella se encuentra la tabla `products`, encargada de almacenar los registros.
-
-### Estructura de la tabla `products`
-
-| Campo | Descripción |
-|---|---|
-| `id` | Identificador único del producto. |
-| `description` | Descripción del producto. |
-| `price` | Precio del producto. |
-| `stock` | Cantidad disponible. |
-| `created_at` | Fecha de creación. |
-| `updated_at` | Fecha de actualización. |
-
-La estructura se administra mediante migraciones de Laravel, lo que permite crear y modificar columnas sin tener que reconstruir manualmente toda la tabla.
-
-## 🔄 Funcionalidades CRUD
-
-El sistema implementa las cuatro operaciones principales de administración de datos.
-
-### 🟢 1. Create — Crear productos
-
-Permite registrar nuevos productos mediante un formulario.
-
-Los campos solicitados son:
-
-- Descripción.
-- Precio.
-- Stock.
-
-Antes de guardar la información, Laravel realiza validaciones para comprobar que los datos sean correctos.
-
-### 🔵 2. Read — Consultar productos
-
-Permite visualizar los productos registrados en la base de datos.
-
-El listado muestra la información principal de cada producto y proporciona acceso a las opciones de consulta individual, edición y eliminación.
-
-### 🟡 3. Update — Editar productos
-
-Permite modificar los datos de un producto existente.
-
-Al seleccionar la opción de edición, se muestra un formulario con los valores actuales. Después de realizar los cambios, se pueden guardar mediante la opción correspondiente.
-
-### 🔴 4. Delete — Eliminar productos
-
-Permite eliminar registros de la base de datos.
-
-Antes de ejecutar la eliminación, el sistema solicita una confirmación para evitar que el usuario borre un producto accidentalmente.
-
----
-
-## 📂 Estructura del proyecto
-
-Los archivos principales utilizados para desarrollar el CRUD son:
+### Estructura de carpetas
 
 ```text
 crud/
@@ -243,7 +123,7 @@ crud/
 │
 ├── database/
 │   └── migrations/
-│       └── Migraciones de productos
+│       └── create_products_table.php
 │
 ├── resources/
 │   └── views/
@@ -257,253 +137,176 @@ crud/
 ├── routes/
 │   └── web.php
 │
-├── .env
+├── .env.example
+├── artisan
+├── composer.json
+├── package.json
 └── README.md
 ```
 
-### Descripción de los archivos principales
+## ⚙️ Instalación y ejecución
 
-| Archivo | Responsabilidad |
-|---|---|
-| `Product.php` | Modelo que representa los productos. |
-| `ProductController.php` | Controla las operaciones CRUD. |
-| `index.blade.php` | Muestra el listado de productos. |
-| `create.blade.php` | Formulario para crear productos. |
-| `edit.blade.php` | Formulario para modificar productos. |
-| `show.blade.php` | Muestra los detalles del producto. |
-| `form.blade.php` | Vista parcial del formulario. |
-| `web.php` | Define las rutas del sistema. |
+### Requisitos previos
 
-**Nota:** las vistas están dentro de `product` (singular), mientras que el recurso de las rutas se llama `products` (plural).
+Antes de ejecutar el proyecto, se necesita:
 
----
+- PHP 8.3 o compatible.
+- Composer.
+- Node.js y NPM.
+- MySQL.
+- WampServer o un entorno equivalente.
 
-## 🐛 Errores encontrados y soluciones
-
-Durante el desarrollo se presentaron diferentes inconvenientes técnicos. Cada uno fue identificado y corregido para conseguir el funcionamiento esperado.
-
-### 1. Problema con los recursos de Vite
-
-**Descripción:** la página inicial presentaba un error al cargar los recursos del frontend.
-
-**Causa:** la vista inicial tenía referencias incorrectas a los archivos de estilos y JavaScript.
-
-**Solución:** se corrigió el archivo `welcome.blade.php` para utilizar los recursos correspondientes y se ejecutó:
+### 1. Clonar el repositorio
 
 ```bash
-npm run build
+git clone URL_DEL_REPOSITORIO
 ```
 
-### 2. Modelo Product no encontrado
+Ingresar al directorio:
 
-**Descripción:** Laravel no reconocía correctamente la clase `App\Models\Product`.
-
-**Causa:** el modelo necesitaba estar definido correctamente para trabajar con la tabla de productos.
-
-**Solución:** se corrigió `app/Models/Product.php`, especificando la tabla `products` y los campos asignables:
-
-```php
-protected $fillable = [
-    'description',
-    'price',
-    'stock',
-];
+```bash
+cd crud
 ```
 
-También se actualizaron las referencias de autoload y se limpiaron las cachés.
+### 2. Instalar dependencias
 
-### 3. Vista products.create no encontrada
-
-**Descripción:** Laravel mostraba el mensaje:
-
-```text
-No se encontró la vista [products.create].
+```bash
+composer install
+npm install
 ```
 
-**Causa:** el controlador buscaba una carpeta llamada `products`, pero las vistas estaban guardadas en `product`.
+### 3. Configurar el entorno
 
-**Solución:** se corrigieron las referencias del controlador para utilizar la carpeta correcta:
+Crear el archivo `.env`:
 
-```php
-return view('product.create');
+```bash
+copy .env.example .env
 ```
 
-Se aplicó el mismo cambio a las demás vistas.
+Generar la clave de Laravel:
 
-### 4. Columna description inexistente
-
-**Descripción:** al intentar guardar un producto, MySQL mostraba:
-
-```text
-SQLSTATE[42S22]: Column not found: 1054
-Unknown column 'description' in 'field list'.
+```bash
+php artisan key:generate
 ```
 
-**Causa:** la tabla `products` solamente contenía inicialmente los campos `id`, `created_at` y `updated_at`.
+### 4. Configurar MySQL
 
-**Solución:** se creó una nueva migración para agregar las columnas que necesitaba el sistema:
+Crear una base de datos llamada `crud`.
 
-```php
-$table->string('description')->nullable();
-$table->decimal('price', 10, 2)->default(0);
-$table->unsignedInteger('stock')->default(0);
+En el archivo `.env`, establecer:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=crud
+DB_USERNAME=root
+DB_PASSWORD=
 ```
 
-Posteriormente se ejecutó:
+Los valores de usuario y contraseña deben ajustarse según la configuración local de MySQL.
+
+### 5. Ejecutar las migraciones
 
 ```bash
 php artisan migrate
 ```
 
-Se comprobó la estructura de la tabla mediante Laravel Tinker y se confirmó que las columnas ya estaban disponibles.
-
-### 5. Variable $i indefinida
-
-**Descripción:** al abrir el listado de productos apareció el error:
-
-```text
-Undefined variable $i
-```
-
-**Causa:** la vista intentaba utilizar la variable `$i` para numerar los productos, pero esta no había sido inicializada.
-
-**Solución:** se reemplazó el contador por el mecanismo de iteración de Blade:
-
-```php
-{{ $loop->iteration }}
-```
-
-Así, cada producto recibe automáticamente un número consecutivo.
-
-### 6. Problemas en las funciones Ver y Editar
-
-**Descripción:** las opciones para consultar y editar productos no funcionaban correctamente.
-
-**Causa:** era necesario ajustar las referencias de las vistas y los formularios para que coincidieran con los métodos del controlador.
-
-**Solución:** se corrigieron los métodos `show`, `edit` y `update` del controlador, además de las vistas `show.blade.php` y `edit.blade.php`.
-
-Se verificaron las rutas utilizadas para consultar los detalles y guardar las modificaciones.
-
-### 7. Limpieza de caché
-
-Durante las correcciones se ejecutaron los siguientes comandos:
+### 6. Compilar los recursos
 
 ```bash
-php artisan view:clear
-php artisan optimize:clear
+npm run build
 ```
 
-Esto permitió limpiar las vistas compiladas y las cachés de Laravel para que los cambios realizados fueran reconocidos correctamente.
+### 7. Iniciar el servidor
 
----
+```bash
+php artisan serve
+```
 
-## 🧪 Pruebas realizadas
+Abrir en el navegador:
 
-Para comprobar el funcionamiento del sistema se realizaron pruebas desde el navegador.
+`http://127.0.0.1:8000`
 
-| Operación | Comprobación | Resultado |
-|---|---|---|
-| Crear | Registrar un producto nuevo. | Correcto |
-| Listar | Mostrar los productos registrados. | Correcto |
-| Ver | Consultar los detalles de un producto. | Correcto |
-| Editar | Modificar los datos de un producto. | Correcto |
-| Eliminar | Borrar un producto del sistema. | Correcto |
+## 🗄️ Base de datos
 
-### Datos utilizados en la prueba
+El proyecto utiliza MySQL y una tabla principal llamada `products`.
 
-Se utilizó el siguiente registro de ejemplo:
+| Campo | Tipo de dato | Descripción |
+|:---|:---|:---|
+| id | BIGINT | Clave primaria. |
+| description | VARCHAR | Descripción del producto. |
+| price | DECIMAL | Precio del producto. |
+| stock | INTEGER | Cantidad disponible. |
+| created_at | TIMESTAMP | Fecha de creación. |
+| updated_at | TIMESTAMP | Fecha de actualización. |
 
-| Campo | Valor |
-|---|---|
-| Descripción | Teclado |
-| Precio | 15.50 |
-| Stock | 10 |
+La estructura se administra mediante las migraciones de Laravel, lo que permite crear y mantener la tabla desde el propio framework.
 
-Después de corregir la estructura de la base de datos y las vistas, se pudo completar el proceso de administración del producto.
+## 🔄 Rutas y operaciones CRUD
 
----
+El controlador `ProductController` administra las operaciones del sistema mediante rutas de recursos.
 
-## 📸 Evidencias del proyecto
+| Método HTTP | Operación | Función |
+|:---|:---|:---|
+| GET | Index | Mostrar productos. |
+| GET | Create | Mostrar formulario de registro. |
+| POST | Store | Guardar un producto. |
+| GET | Show | Consultar un producto. |
+| GET | Edit | Mostrar formulario de edición. |
+| PUT/PATCH | Update | Actualizar un producto. |
+| DELETE | Destroy | Eliminar un producto. |
 
-Las siguientes figuras corresponden a los resultados finales disponibles del sistema.
+## 🧪 Pruebas y solución de errores
 
-No se dispone de capturas de todos los pasos iniciales ni de los errores presentados durante el desarrollo. Por ello, estos se documentaron mediante sus mensajes, causas y soluciones en la sección anterior.
+Durante la implementación se presentaron inconvenientes de configuración y desarrollo. Se realizaron las siguientes correcciones:
 
-### Figura 1. Listado de productos
+| Inconveniente | Solución |
+|:---|:---|
+| Problemas con la carga de recursos Vite. | Se revisó la configuración y se compilaron los recursos del frontend. |
+| Problemas de configuración del modelo Product. | Se revisaron la tabla asociada y los campos asignables. |
+| Vista `products.create` no encontrada. | Se corrigieron las referencias porque la carpeta de vistas se llama `product`, en singular. |
+| Columna `description` desconocida. | Se creó una migración para agregar `description`, `price` y `stock`. |
+| Variable `$i` no definida. | Se utilizó `$loop->iteration` en la vista Blade. |
+| Problemas en las vistas de consulta y edición. | Se corrigieron las referencias de las vistas y los métodos correspondientes del controlador. |
 
-Vista principal donde se muestran los productos registrados y las opciones disponibles para administrarlos.
+## 📊 Resultados obtenidos
 
-**Captura:**
+Al finalizar el desarrollo, se logró implementar un sistema funcional para administrar productos.
 
-![Figura 1 - Listado de productos](capturas/listado.png)
+Se verificaron las siguientes operaciones:
 
-### Figura 2. Registro de productos
+- Registro de nuevos productos.
+- Visualización del listado.
+- Consulta de detalles individuales.
+- Modificación de registros existentes.
+- Eliminación de productos.
 
-Formulario utilizado para introducir la descripción, el precio y el stock de un producto.
+El proyecto permitió aplicar conocimientos de desarrollo web, bases de datos relacionales, migraciones, rutas, controladores, modelos y vistas Blade.
 
-**Captura:**
+## 🎓 Aprendizajes
 
-![Figura 2 - Crear producto](capturas/crear.png)
+Durante esta práctica se reforzaron conocimientos sobre:
 
-### Figura 3. Detalles del producto
-
-Vista individual que permite consultar la información de un producto seleccionado.
-
-**Captura:**
-
-![Figura 3 - Detalles del producto](capturas/ver.png)
-
-### Figura 4. Edición de productos
-
-Formulario que permite modificar la información de un producto existente.
-
-**Captura:**
-
-![Figura 4 - Editar producto](capturas/editar.png)
-
-### Figura 5. Resultado final
-
-Evidencia del funcionamiento de la aplicación después de realizar las correcciones y pruebas correspondientes.
-
-**Captura:**
-
-![Figura 5 - Resultado final](capturas/resultado-final.png)
-
-> **Importante:** los nombres de las imágenes son ejemplos. Deben sustituirse por los nombres reales de las capturas que se incluyan en el repositorio. Si no tienes una captura de alguna función, elimina esa figura en lugar de inventar una evidencia.
-
----
-
-## 🔐 Seguridad y buenas prácticas
-
-Durante el desarrollo se aplicaron las siguientes prácticas:
-
-- Validación de los datos antes de guardar o actualizar registros.
-- Uso de `@csrf` para proteger los formularios.
-- Utilización de los métodos HTTP correspondientes para las operaciones de actualización y eliminación.
-- Separación de responsabilidades entre modelos, controladores y vistas.
-- Uso de migraciones para administrar la estructura de la base de datos.
-- Configuración de la conexión mediante variables de entorno.
-- Protección del archivo `.env`, evitando publicar credenciales en GitHub.
-
-**Importante:** nunca se debe subir el archivo `.env` con credenciales reales a un repositorio público. Se debe conservar el archivo `.env.example` sin contraseñas privadas.
-
-## 🎓 Conclusiones
-
-El desarrollo de este proyecto permitió comprender la implementación de un sistema CRUD utilizando Laravel y MySQL.
-
-Durante el proceso se trabajó con modelos, controladores, rutas, vistas Blade y migraciones, relacionando cada uno de estos componentes para conseguir una aplicación funcional.
-
-Los errores encontrados permitieron reforzar conocimientos sobre la estructura de las vistas, la conexión con la base de datos, la definición de columnas y el manejo de variables dentro de Blade.
-
-Finalmente, se consiguió implementar un sistema que permite crear, consultar, editar y eliminar productos desde una interfaz web, cumpliendo con las funcionalidades principales solicitadas para un CRUD.
+- Desarrollo de aplicaciones con Laravel.
+- Organización de proyectos mediante MVC.
+- Conexión de Laravel con MySQL.
+- Creación y ejecución de migraciones.
+- Implementación de operaciones CRUD.
+- Uso de rutas y controladores.
+- Construcción de interfaces con Blade y Bootstrap.
+- Identificación y resolución de errores.
 
 ---
 
 <p align="center">
-  <strong>Proyecto CRUD de Productos</strong>
+  <b>Desarrollado por Adriana Mendoza</b>
   <br>
-  Desarrollado con Laravel y MySQL
-  <br><br>
-  <sub>Licenciatura en Ciberseguridad</sub>
+  Licenciatura en Ciberseguridad
+  <br>
+  Proyecto académico
+</p>
+
+<p align="center">
+  <sub>Laravel · PHP · MySQL · Bootstrap</sub>
 </p>
