@@ -301,10 +301,6 @@ Durante esta práctica se reforzaron conocimientos sobre:
   <b>Desarrollado por Adriana Mendoza</b>
   <br>
   Licenciatura en Ciberseguridad
-  <br>
-  Proyecto académico
 </p>
 
-<p align="center">
-  <sub>Laravel · PHP · MySQL · Bootstrap</sub>
-</p>
+
