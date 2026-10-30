@@ -30,33 +30,31 @@ A continuación, se presentan capturas del resultado final de la aplicación.
   <b>Vista principal — Listado de productos</b>
 </p>
 
-<p align="center">
-  <img src="capturas/listado.png" width="85%" alt="Listado de productos">
-</p>
+<img width="1557" height="361" alt="image" src="https://github.com/user-attachments/assets/c5c83c08-b157-4de9-a2c7-ed72bc136c05" />
+
 
 <p align="center">
   <b>Registro de productos</b>
 </p>
 
-<p align="center">
-  <img src="capturas/crear.png" width="85%" alt="Formulario para crear productos">
-</p>
+<img width="1212" height="593" alt="image" src="https://github.com/user-attachments/assets/e0bc6751-e2fa-40e3-bf31-eb33919c8b0e" />
+<img width="787" height="507" alt="image" src="https://github.com/user-attachments/assets/445459b5-24ce-4de9-9e70-68fdc710617e" />
+
 
 <p align="center">
   <b>Edición de productos</b>
 </p>
 
-<p align="center">
-  <img src="capturas/editar.png" width="85%" alt="Formulario de edición">
-</p>
+<img width="720" height="577" alt="image" src="https://github.com/user-attachments/assets/7598923a-e851-43d7-971b-ea1a798b749c" />
+<img width="1497" height="472" alt="image" src="https://github.com/user-attachments/assets/b8f8bc26-3722-4250-b039-2f2473fe3e28" />
+
 
 <p align="center">
   <b>Visualización de detalles</b>
 </p>
 
-<p align="center">
-  <img src="capturas/detalles.png" width="85%" alt="Detalles del producto">
-</p>
+<img width="916" height="472" alt="image" src="https://github.com/user-attachments/assets/ec2a162d-0598-4e1b-90d7-5c911366b356" />
+
 
 ## ✨ Funcionalidades principales
 
